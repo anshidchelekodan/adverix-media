@@ -1,37 +1,47 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
-const clients = [
-  "Kalpaka", "SIGMA", "FH", "FUTURIX", "DOTIN", "Rainmaker",
+// Temporary placeholder for brand logos
+const BRAND_LOGOS = [
+  "/portfolio/technova.jpg",
+  "/portfolio/technova.jpg",
+  "/portfolio/technova.jpg",
+  "/portfolio/technova.jpg",
+  "/portfolio/technova.jpg",
+  "/portfolio/technova.jpg",
 ];
 
 export default function LogoMarquee() {
-  const doubled = [...clients, ...clients, ...clients];
-
   return (
-    <div className="py-16 bg-white border-b border-gray-100 overflow-hidden">
-      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
-        <p className="text-center text-[10px] font-bold tracking-[0.2em] text-[#999] uppercase mb-12">
+    <section className="bg-white py-16 lg:py-24 border-b border-gray-100">
+      <div className="container-custom">
+        <p className="text-center text-xs lg:text-sm font-bold text-[#888] tracking-[0.2em] uppercase mb-12">
           Trusted By Growing Businesses
         </p>
-      </motion.div>
-      <div className="marquee-container relative mb-16">
-        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10" />
         
-        <div className="flex animate-marquee w-max gap-24 items-center px-10">
-          {doubled.map((name, i) => (
-            <div key={i} className="text-[#666] font-heading font-extrabold text-2xl uppercase tracking-widest whitespace-nowrap opacity-50 grayscale transition-all duration-300 hover:grayscale-0 hover:opacity-100 cursor-default">
-              {name}
-            </div>
-          ))}
+        {/* Marquee Container */}
+        <div className="relative w-full overflow-hidden flex items-center h-16 lg:h-20 mb-24 lg:mb-32">
+          {/* Left/Right Fade Masks */}
+          <div className="absolute left-0 top-0 bottom-0 w-24 lg:w-40 bg-gradient-to-r from-white to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 lg:w-40 bg-gradient-to-l from-white to-transparent z-10" />
+          
+          <motion.div 
+            className="flex gap-16 lg:gap-24 items-center whitespace-nowrap"
+            animate={{ x: [0, -1000] }}
+            transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+          >
+            {[...BRAND_LOGOS, ...BRAND_LOGOS].map((logo, i) => (
+              <div key={i} className="relative w-28 lg:w-36 h-10 lg:h-12 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                <Image src={logo} alt="Brand Logo" fill className="object-contain" />
+              </div>
+            ))}
+          </motion.div>
         </div>
-      </div>
-      
-      {/* Stats Row */}
-      <div className="container-custom">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+
+        {/* Stats Row */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 max-w-5xl mx-auto border-t border-gray-100 pt-16 lg:pt-20">
           {[
             { label: "Projects Completed", value: "200+", icon: "🚀" },
             { label: "Happy Clients", value: "100+", icon: "👩‍💼" },
@@ -44,17 +54,15 @@ export default function LogoMarquee() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="flex items-center gap-3"
+              className="text-center group"
             >
-              <div className="text-2xl">{stat.icon}</div>
-              <div>
-                <div className="font-heading font-extrabold text-xl text-[#111]">{stat.value}</div>
-                <div className="text-[10px] font-bold text-[#666]">{stat.label}</div>
-              </div>
+              <div className="text-3xl lg:text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300 inline-block">{stat.icon}</div>
+              <p className="font-heading font-extrabold text-[#111] text-4xl lg:text-5xl mb-2">{stat.value}</p>
+              <p className="text-[#666] text-sm lg:text-base font-bold uppercase tracking-wider">{stat.label}</p>
             </motion.div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

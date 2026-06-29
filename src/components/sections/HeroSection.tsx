@@ -7,53 +7,53 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden bg-white">
+    <section className="relative min-h-screen flex items-center pt-24 overflow-hidden bg-white">
       {/* Decorative background dot pattern */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-[0.03]" 
-           style={{ backgroundImage: 'radial-gradient(#E63946 2px, transparent 2px)', backgroundSize: '30px 30px' }} />
+           style={{ backgroundImage: 'radial-gradient(#E63946 2px, transparent 2px)', backgroundSize: '40px 40px' }} />
            
-      <div className="container-custom relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+      <div className="container-custom relative z-10 w-full py-12 lg:py-0">
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center justify-between">
           
-          {/* Left Content */}
-          <div className="max-w-xl">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-              <p className="text-[#E63946] text-xs font-bold tracking-wider uppercase mb-4">
+          {/* Left Content (45%) */}
+          <div className="w-full lg:w-[45%] lg:flex-shrink-0">
+            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }}>
+              <p className="text-[#E63946] text-xs lg:text-sm font-bold tracking-widest uppercase mb-6">
                 Premium Digital Marketing & Video Production Agency
               </p>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-[#111] leading-[1.1] mb-6">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl 2xl:text-[5rem] font-heading font-extrabold text-[#111] leading-[1.05] mb-8">
                 Transforming Brands Through <span className="text-[#E63946]">Strategy</span>, Creativity & Visual Storytelling
               </h1>
-              <p className="text-[#666] text-base sm:text-lg mb-8 leading-relaxed font-medium">
+              <p className="text-[#666] text-lg lg:text-xl mb-10 leading-relaxed font-medium max-w-2xl">
                 We help businesses grow faster with data-driven digital marketing and cinematic video production that generates measurable results.
               </p>
               
-              <div className="flex flex-wrap items-center gap-4 mb-10">
-                <Link href="/contact" className="bg-[#E63946] hover:bg-[#c1121f] text-white px-6 py-3.5 rounded-full font-bold text-sm flex items-center gap-2 transition-colors shadow-lg shadow-red-500/20">
-                  Book Free Strategy Call <ArrowRight size={16} />
+              <div className="flex flex-wrap items-center gap-6 mb-12">
+                <Link href="/contact" className="bg-[#E63946] hover:bg-[#c1121f] text-white px-8 py-4 lg:py-5 rounded-full font-bold text-sm lg:text-base flex items-center gap-3 transition-transform hover:scale-105 shadow-xl shadow-red-500/20">
+                  Book Free Strategy Call <ArrowRight size={18} />
                 </Link>
-                <Link href="/portfolio" className="bg-white hover:bg-gray-50 text-[#111] border border-gray-200 px-6 py-3.5 rounded-full font-bold text-sm flex items-center gap-2 transition-colors shadow-sm">
-                  <Play size={16} className="text-[#E63946] fill-[#E63946]" /> Explore Our Work
+                <Link href="/portfolio" className="bg-white hover:bg-gray-50 text-[#111] border border-gray-200 px-8 py-4 lg:py-5 rounded-full font-bold text-sm lg:text-base flex items-center gap-3 transition-all hover:-translate-y-1 hover:shadow-lg">
+                  <Play size={18} className="text-[#E63946] fill-[#E63946]" /> Explore Our Work
                 </Link>
               </div>
 
               {/* Happy Clients */}
-              <div className="flex items-center gap-4">
-                <div className="flex -space-x-3">
+              <div className="flex items-center gap-5">
+                <div className="flex -space-x-4">
                   {[1, 2, 3, 4].map((i) => (
-                    <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-gray-200 overflow-hidden relative">
+                    <div key={i} className="w-12 h-12 lg:w-14 lg:h-14 rounded-full border-[3px] border-white bg-gray-200 overflow-hidden relative shadow-sm">
                        <Image src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${i}`} alt="Client" fill className="object-cover" />
                     </div>
                   ))}
                 </div>
                 <div>
-                  <p className="text-[#111] font-bold text-sm">200+ Happy Clients</p>
-                  <div className="flex items-center gap-1">
-                    <span className="text-xs text-[#666] font-bold">4.9</span>
-                    <span className="text-[10px] text-[#888]">(120+ Reviews)</span>
+                  <p className="text-[#111] font-bold text-base lg:text-lg mb-1">200+ Happy Clients</p>
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm text-[#666] font-bold">4.9</span>
+                    <span className="text-xs text-[#888] font-medium">(120+ Reviews)</span>
                     <div className="flex ml-1">
                       {[1, 2, 3, 4, 5].map((i) => (
-                        <Star key={i} size={10} className="text-[#f59e0b] fill-[#f59e0b]" />
+                        <Star key={i} size={12} className="text-[#f59e0b] fill-[#f59e0b]" />
                       ))}
                     </div>
                   </div>
@@ -62,8 +62,8 @@ export default function HeroSection() {
             </motion.div>
           </div>
 
-          {/* Right Content - Image/Video with floating cards */}
-          <div className="relative h-[400px] sm:h-[500px] lg:h-[600px] w-full mt-10 lg:mt-0">
+          {/* Right Content (50%) - Image/Video with floating cards */}
+          <div className="relative w-full lg:w-[50%] h-[500px] sm:h-[600px] lg:h-[700px] mt-16 lg:mt-0 lg:flex-shrink-0">
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -72,12 +72,15 @@ export default function HeroSection() {
             >
               {/* Main Video/Image Container */}
               <div className="relative w-full max-w-[500px] aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border border-gray-100 bg-gray-100 z-10">
-                <Image src="/portfolio/technova.jpg" alt="Video thumbnail" fill className="object-cover" />
-                <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                   <div className="w-16 h-16 bg-[#E63946] rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform shadow-lg shadow-red-500/30">
-                     <Play size={24} className="text-white fill-white ml-1" />
-                   </div>
-                </div>
+                <video 
+                  src="/home.mp4" 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
+                  className="w-full h-full object-cover pointer-events-none"
+                />
+                <div className="absolute inset-0 bg-black/5" />
               </div>
 
               {/* Floating Cards - Replicating the design exactly */}
