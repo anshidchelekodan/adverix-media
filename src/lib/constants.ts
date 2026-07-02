@@ -7,9 +7,10 @@ export const SITE = {
     "Adverix Media is a premium digital marketing agency helping businesses grow faster through SEO, Performance Marketing, Branding, and Cinematic Video Production.",
   url: "https://adverixmedia.com",
   email: "hello@adverixmedia.com",
-  phone: "+91 98765 43210",
-  whatsapp: "+919876543210",
-  address: "Mumbai, Maharashtra, India",
+  phone: "+91 92921 99727",
+  whatsapp: "+919292199727",
+  address: "Malappuram nilambur, Edakkara..679331",
+  workingHours: "10:00 AM to 6:00 PM",
   founded: 2019,
 };
 
@@ -106,7 +107,7 @@ export const SERVICES = [
 ];
 
 export const SOCIAL_LINKS = [
-  { label: "Instagram", href: "https://instagram.com/adverixmedia", icon: "Instagram" },
+  { label: "Instagram", href: "https://www.instagram.com/adverix.media?igsh=MXZhdnIyYmdwMTc0aA==", icon: "Instagram" },
   { label: "Facebook",  href: "https://facebook.com/adverixmedia",  icon: "Facebook" },
   { label: "LinkedIn",  href: "https://linkedin.com/company/adverixmedia", icon: "Linkedin" },
   { label: "YouTube",   href: "https://youtube.com/@adverixmedia",  icon: "Youtube" },

@@ -3,17 +3,16 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-// Temporary placeholder for brand logos
-const BRAND_LOGOS = [
-  "/portfolio/technova.jpg",
-  "/portfolio/technova.jpg",
-  "/portfolio/technova.jpg",
-  "/portfolio/technova.jpg",
-  "/portfolio/technova.jpg",
-  "/portfolio/technova.jpg",
+// Client names provided by user
+const CLIENTS = [
+  "Kalpaka Electronics & Home Bazaar",
+  "Sigma Electronics & Home Appliances",
+  "Huelex Kids Wear",
 ];
 
 export default function LogoMarquee() {
+  const doubled = [...CLIENTS, ...CLIENTS, ...CLIENTS];
+
   return (
     <section className="bg-white py-16 lg:py-24 border-b border-gray-100">
       <div className="container-custom">
@@ -28,13 +27,13 @@ export default function LogoMarquee() {
           <div className="absolute right-0 top-0 bottom-0 w-24 lg:w-40 bg-gradient-to-l from-white to-transparent z-10" />
           
           <motion.div 
-            className="flex gap-16 lg:gap-24 items-center whitespace-nowrap"
-            animate={{ x: [0, -1000] }}
-            transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+            className="flex gap-16 lg:gap-24 items-center whitespace-nowrap px-10"
+            animate={{ x: [0, -1500] }}
+            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
           >
-            {[...BRAND_LOGOS, ...BRAND_LOGOS].map((logo, i) => (
-              <div key={i} className="relative w-28 lg:w-36 h-10 lg:h-12 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
-                <Image src={logo} alt="Brand Logo" fill className="object-contain" />
+            {doubled.map((name, i) => (
+              <div key={i} className="text-[#111] font-heading font-extrabold text-xl lg:text-2xl uppercase tracking-widest whitespace-nowrap opacity-40 transition-opacity duration-300 hover:opacity-100 cursor-default">
+                {name}
               </div>
             ))}
           </motion.div>

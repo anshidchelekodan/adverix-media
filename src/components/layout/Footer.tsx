@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { FaInstagram, FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa";
-import { SITE, NAV_LINKS } from "@/lib/constants";
+import { SITE, NAV_LINKS, SOCIAL_LINKS } from "@/lib/constants";
 
 export default function Footer() {
   return (
@@ -32,9 +32,13 @@ export default function Footer() {
             </p>
             
             <div className="flex gap-4">
-              {[FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube].map((Icon, i) => (
-                <a key={i} href="#" className="w-10 h-10 rounded-full bg-[#111] flex items-center justify-center text-white hover:bg-[#E63946] transition-transform hover:-translate-y-1 shadow-sm">
-                  <Icon size={14} />
+              {SOCIAL_LINKS.map((link) => (
+                <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#111] flex items-center justify-center text-white hover:bg-[#E63946] transition-transform hover:-translate-y-1 shadow-sm">
+                  {link.icon === "Instagram" && <FaInstagram size={14} />}
+                  {link.icon === "Facebook" && <FaFacebookF size={14} />}
+                  {link.icon === "Linkedin" && <FaLinkedinIn size={14} />}
+                  {link.icon === "Youtube" && <FaYoutube size={14} />}
+                  {link.icon === "Twitter" && <span className="font-bold text-xs">X</span>}
                 </a>
               ))}
             </div>
@@ -75,12 +79,19 @@ export default function Footer() {
               <a href={`tel:${SITE.phone}`} className="flex items-center gap-3 text-sm text-[#666] hover:text-[#E63946] font-medium transition-colors">
                 <span className="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center text-[#E63946]">📞</span> {SITE.phone}
               </a>
+              <a href={`https://wa.me/${SITE.whatsapp.replace('+', '')}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-[#666] hover:text-[#E63946] font-medium transition-colors">
+                <span className="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center text-[#E63946]">💬</span> WhatsApp Us
+              </a>
               <a href={`mailto:${SITE.email}`} className="flex items-center gap-3 text-sm text-[#666] hover:text-[#E63946] font-medium transition-colors">
                 <span className="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center text-[#E63946]">✉️</span> {SITE.email}
               </a>
               <p className="flex items-start gap-3 text-sm text-[#666] font-medium">
                 <span className="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center text-[#E63946] shrink-0">📍</span> 
-                <span className="pt-1">Manjeri, Malappuram,<br/>Kerala, India</span>
+                <span className="pt-1">{SITE.address}</span>
+              </p>
+              <p className="flex items-start gap-3 text-sm text-[#666] font-medium">
+                <span className="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center text-[#E63946] shrink-0">🕒</span> 
+                <span className="pt-1">{SITE.workingHours}</span>
               </p>
             </div>
 
