@@ -8,7 +8,6 @@ import ProcessSection from "@/components/sections/ProcessSection";
 import LogoMarquee from "@/components/sections/LogoMarquee";
 import FeaturedCaseStudies from "@/components/sections/FeaturedCaseStudies";
 import FeaturedBlogSection from "@/components/sections/FeaturedBlogSection";
-import PackagesSection from "@/components/sections/PackagesSection";
 
 export const metadata: Metadata = {
   title: `${SITE.name} — Premium Digital Marketing Agency`,
@@ -34,12 +33,12 @@ const homepageSchema = {
   email: SITE.email,
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Malappuram",
-    addressRegion: "KL",
+    addressLocality: "Mumbai",
+    addressRegion: "MH",
     addressCountry: "IN",
   },
-  geo: { "@type": "GeoCoordinates", latitude: 11.2748, longitude: 76.2238 },
-  openingHours: "Mo-Sa 10:00-18:00",
+  geo: { "@type": "GeoCoordinates", latitude: 19.076, longitude: 72.8777 },
+  openingHours: "Mo-Sa 09:00-19:00",
   priceRange: "₹₹₹",
   aggregateRating: {
     "@type": "AggregateRating",
@@ -60,9 +59,10 @@ export default function HomePage() {
       <LogoMarquee />
       <ServicesSection />
       <ProcessSection />
-      <PackagesSection />
       <FeaturedCaseStudies />
       <TestimonialsSection />
       <FeaturedBlogSection />
       <CTASection />
     </>
+  );
+}
