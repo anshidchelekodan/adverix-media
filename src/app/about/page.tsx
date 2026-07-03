@@ -3,7 +3,7 @@ import Link from "next/link";
 import { SITE } from "@/lib/constants";
 import Reveal from "@/components/ui/Reveal";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
-import CTASection from "@/components/sections/CTASection";git pu
+import CTASection from "@/components/sections/CTASection";
 import { CheckCircle, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
