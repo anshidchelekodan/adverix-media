@@ -1,8 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Calendar, User, Clock, Share2 } from "lucide-react";
-import { SITE } from "@/lib/constants";
+import { Calendar, User, Clock, Share2 } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";
 import CTASection from "@/components/sections/CTASection";
 
@@ -75,7 +74,7 @@ export default async function BlogPostPage({ params }: Props) {
               
               <h2>Understanding the Basics</h2>
               <p>
-                Digital marketing is constantly evolving. What worked yesterday might not work today. That's why it's critical to stay ahead of the curve.
+                Digital marketing is constantly evolving. What worked yesterday might not work today. That&apos;s why it&apos;s critical to stay ahead of the curve.
               </p>
               
               <h3>Key Strategies for Success</h3>
@@ -87,7 +86,7 @@ export default async function BlogPostPage({ params }: Props) {
               </ul>
               
               <blockquote>
-                "Marketing is no longer about the stuff that you make, but about the stories you tell." - Seth Godin
+                &quot;Marketing is no longer about the stuff that you make, but about the stories you tell.&quot; - Seth Godin
               </blockquote>
               
               <h2>Conclusion</h2>

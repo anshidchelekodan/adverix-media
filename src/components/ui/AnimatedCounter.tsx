@@ -26,7 +26,10 @@ export default function AnimatedCounter({ end, duration = 2000 }: CounterProps) 
   useEffect(() => {
     if (!started) return;
     const numMatch = end.match(/[\d.]+/);
-    if (!numMatch) { setDisplay(end); return; }
+    if (!numMatch) { 
+      const t = setTimeout(() => setDisplay(end), 0); 
+      return () => clearTimeout(t); 
+    }
     const suffix = end.replace(/[\d.]+/, "");
     const target = parseFloat(numMatch[0]);
     const isDecimal = numMatch[0].includes(".");

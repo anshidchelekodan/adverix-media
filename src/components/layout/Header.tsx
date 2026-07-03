@@ -21,7 +21,8 @@ export default function Header() {
   }, []);
 
   useEffect(() => {
-    setIsMobileMenuOpen(false);
+    const t = setTimeout(() => setIsMobileMenuOpen(false), 0);
+    return () => clearTimeout(t);
   }, [pathname]);
 
   const navVariants = {

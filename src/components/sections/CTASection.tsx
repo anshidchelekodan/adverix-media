@@ -25,7 +25,7 @@ export default function CTASection() {
               <span className="w-12 h-[2px] bg-[#E63946]" /> Ready to Grow?
             </p>
             <h2 className="text-4xl sm:text-5xl lg:text-7xl font-heading font-extrabold text-[#111] leading-tight mb-4">
-              Let's Build Something <br />
+              Let&apos;s Build Something <br />
               <span className="text-[#E63946]">Extraordinary</span> Together
             </h2>
           </div>

@@ -90,7 +90,7 @@ export default function CaseStudiesPage() {
               Client <span className="text-gradient">Success Stories</span>
             </h1>
             <p className="text-lg text-[#666] max-w-2xl leading-relaxed">
-              We measure our success by the growth of our clients. Explore how we've helped ambitious brands achieve their revenue goals.
+              We measure our success by the growth of our clients. Explore how we&apos;ve helped ambitious brands achieve their revenue goals.
             </p>
           </Reveal>
         </div>
