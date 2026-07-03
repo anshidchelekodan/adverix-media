@@ -2,7 +2,7 @@
 export const SITE = {
   name: "Adverix Media",
   description:
-    "Adverix Media is a premium digital marketing agency delivering SEO, Google Ads, branding, video production, and social media marketing with measurable results.",
+    "We are a premium digital marketing and video production agency in Kerala. We help ambitious brands scale through SEO, Google Ads, Meta Ads, and cinematic visual storytelling.",
   url: "https://adverixmedia.com",
   phone: "+91 91882 82337",
   whatsapp: "+919188282337",
@@ -35,132 +35,103 @@ export const SOCIAL_LINKS = [
 // ─── Services ─────────────────────────────────────────────────────────────────
 export const SERVICES = [
   {
-    slug: "seo",
-    title: "Search Engine Optimisation",
+    slug: "seo-services",
+    title: "Search Engine Optimisation (SEO)",
     shortTitle: "SEO",
     description:
-      "Dominate Google rankings and drive consistent, compounding organic traffic with our data-driven SEO strategies.",
+      "We engineer data-driven SEO campaigns that secure page-one rankings, drive high-intent organic traffic, and establish your brand's digital authority.",
     icon: "Search",
-    subServices: [
-      "Technical SEO Audit",
-      "Keyword Research & Strategy",
-      "On-Page Optimisation",
-      "Local SEO",
-      "Link Building",
-      "Core Web Vitals",
-    ],
+    subServices: ["Technical SEO", "Keyword Strategy", "On-Page SEO", "Link Building", "Competitor Analysis", "Core Web Vitals"],
+  },
+  {
+    slug: "google-ads",
+    title: "Google Ads Management",
+    shortTitle: "Google Ads",
+    description:
+      "We capture high-intent search traffic with precision-targeted Google Ads campaigns designed to maximize ROI and lower your cost per acquisition.",
+    icon: "TrendingUp",
+    subServices: ["Search Campaigns", "Display Network", "Shopping Ads", "YouTube Ads", "Retargeting", "Conversion Tracking"],
+  },
+  {
+    slug: "meta-ads",
+    title: "Meta Ads (Facebook & Instagram)",
+    shortTitle: "Meta Ads",
+    description:
+      "We build highly profitable Meta Ad funnels using scroll-stopping creatives and advanced audience targeting to scale your revenue.",
+    icon: "Layers",
+    subServices: ["Campaign Strategy", "Audience Targeting", "Creative A/B Testing", "Retargeting Funnels", "Lead Generation", "E-commerce Sales"],
   },
   {
     slug: "performance-marketing",
     title: "Performance Marketing",
-    shortTitle: "Paid Ads",
+    shortTitle: "Performance Marketing",
     description:
-      "ROI-focused paid advertising on Google, Meta, and YouTube that puts your brand in front of the right people and converts them into customers.",
-    icon: "TrendingUp",
-    subServices: [
-      "Google Search Ads",
-      "Meta (Facebook & Instagram) Ads",
-      "YouTube Ads",
-      "Shopping Campaigns",
-      "Retargeting",
-      "A/B Testing",
-    ],
+      "We integrate cross-channel paid media strategies to deliver measurable, scalable, and predictable revenue growth for your business.",
+    icon: "BarChart3",
+    subServices: ["Cross-Channel Strategy", "ROAS Optimization", "Advanced Attribution", "Funnel Mapping", "Budget Scaling", "Data Analytics"],
+  },
+  {
+    slug: "video-production",
+    title: "Cinematic Video Production",
+    shortTitle: "Video Production",
+    description:
+      "We produce premium, cinematic video content that captures attention, tells your brand story, and significantly boosts conversion rates.",
+    icon: "Video",
+    subServices: ["Brand Films", "Commercial Ads", "Corporate Documentaries", "Product Videos", "Social Media Reels", "Drone Cinematography"],
+  },
+  {
+    slug: "branding",
+    title: "Premium Brand Strategy",
+    shortTitle: "Branding",
+    description:
+      "We craft cohesive, luxurious brand identities that elevate your market positioning, build deep trust, and make competitors irrelevant.",
+    icon: "Layers",
+    subServices: ["Brand Positioning", "Visual Identity", "Logo Design", "Brand Guidelines", "Typography Systems", "Marketing Collateral"],
+  },
+  {
+    slug: "website-design",
+    title: "Enterprise Website Design",
+    shortTitle: "Website Design",
+    description:
+      "We design and develop lightning-fast, conversion-optimized Next.js websites that serve as your most powerful digital asset.",
+    icon: "Monitor",
+    subServices: ["UI/UX Design", "Next.js Development", "Performance Optimization", "Mobile-First Design", "Conversion Rate Optimization (CRO)", "Headless CMS"],
   },
   {
     slug: "social-media-marketing",
     title: "Social Media Marketing",
     shortTitle: "Social Media",
     description:
-      "Build a powerful social presence that turns followers into loyal customers with strategic content, community management, and paid amplification.",
+      "We cultivate engaged digital communities through strategic content, authentic storytelling, and proactive community management.",
     icon: "Share2",
-    subServices: [
-      "Social Media Strategy",
-      "Content Creation",
-      "Community Management",
-      "Influencer Marketing",
-      "Paid Social",
-      "Analytics & Reporting",
-    ],
-  },
-  {
-    slug: "brand-strategy",
-    title: "Brand Strategy & Design",
-    shortTitle: "Branding",
-    description:
-      "Craft a compelling brand identity that commands premium positioning, builds instant trust, and makes your competitors irrelevant.",
-    icon: "Layers",
-    subServices: [
-      "Brand Positioning",
-      "Logo Design",
-      "Visual Identity System",
-      "Brand Guidelines",
-      "Typography & Colour",
-      "Marketing Collateral",
-    ],
-  },
-  {
-    slug: "website-design",
-    title: "Website Design & Development",
-    shortTitle: "Web Design",
-    description:
-      "Premium websites built with Next.js that load fast, look stunning, and convert visitors into customers with precision-engineered UX.",
-    icon: "Monitor",
-    subServices: [
-      "UI/UX Design",
-      "Next.js Development",
-      "WordPress Development",
-      "Mobile-First Responsive",
-      "SEO-Ready Architecture",
-      "CRO Implementation",
-    ],
-  },
-  {
-    slug: "video-production",
-    title: "Video Production",
-    shortTitle: "Video",
-    description:
-      "Cinematic video content that tells your brand story with stunning visual quality and drives real engagement across every platform.",
-    icon: "Video",
-    subServices: [
-      "Commercial & Brand Films",
-      "Product Videos",
-      "Corporate Videos",
-      "Social Media Reels",
-      "Motion Graphics",
-      "Event Coverage",
-    ],
+    subServices: ["Platform Strategy", "Content Creation", "Community Management", "Influencer Partnerships", "Trend Analysis", "Growth Hacking"],
   },
   {
     slug: "content-marketing",
     title: "Content Marketing",
-    shortTitle: "Content",
+    shortTitle: "Content Marketing",
     description:
-      "Strategic content that educates your audience, builds authority, and drives organic traffic and conversions at every stage of the funnel.",
+      "We create authoritative, high-value content that educates your audience, nurtures leads, and drives long-term organic growth.",
     icon: "FileText",
-    subServices: [
-      "Content Strategy",
-      "SEO Blog Articles",
-      "Email Marketing",
-      "Marketing Automation",
-      "Lead Magnets",
-      "Editorial Calendar",
-    ],
+    subServices: ["Content Strategy", "SEO Blog Writing", "Whitepapers", "Email Newsletters", "Lead Magnets", "Copywriting"],
   },
   {
-    slug: "cro",
-    title: "Conversion Rate Optimisation",
-    shortTitle: "CRO",
+    slug: "local-seo",
+    title: "Local SEO Strategies",
+    shortTitle: "Local SEO",
     description:
-      "Turn more of your existing traffic into paying customers with data-backed CRO strategies, A/B testing, and landing page optimisation.",
-    icon: "BarChart3",
-    subServices: [
-      "CRO Audit",
-      "Heatmap & Session Recording",
-      "A/B Testing",
-      "Landing Page Optimisation",
-      "Funnel Optimisation",
-      "User Behaviour Analysis",
-    ],
+      "We dominate local search results and Google Maps to ensure your business captures the highest intent customers in your specific geography.",
+    icon: "Search",
+    subServices: ["Google Business Profile", "Local Citations", "Review Management", "Local Link Building", "Hyper-local Content", "Map Pack Optimization"],
+  },
+  {
+    slug: "aeo",
+    title: "AI Engine Optimization (AEO)",
+    shortTitle: "AEO",
+    description:
+      "We future-proof your digital presence by optimizing your brand entities to be cited as the authoritative answer in ChatGPT, Gemini, and AI Overviews.",
+    icon: "Monitor",
+    subServices: ["Entity SEO", "Knowledge Graph Optimization", "Conversational Content", "FAQ Schema", "Brand Mention Strategies", "AI Search Audits"],
   },
 ] as const;
 
@@ -213,97 +184,168 @@ export const TESTIMONIALS = [
 // ─── FAQ (General) ────────────────────────────────────────────────────────────
 export const FAQ_GENERAL = [
   {
-    q: "What digital marketing services does Adverix Media offer?",
-    a: "We offer a full suite of digital marketing services including SEO, Performance Marketing (Google & Meta Ads), Social Media Marketing, Brand Strategy & Design, Website Design & Development, Video Production, Content Marketing, and Conversion Rate Optimisation.",
+    q: "What digital marketing services do you offer?",
+    a: "We provide an enterprise-grade suite including SEO, Google Ads, Meta Ads, Video Production, Branding, Website Design, Social Media Marketing, Content Marketing, Local SEO, AEO, and Performance Marketing.",
   },
   {
-    q: "How much does digital marketing cost?",
-    a: "Our pricing varies depending on the scope and services required. We offer tailored retainer packages starting from ₹25,000/month, as well as project-based pricing for branding, website, and video work. We recommend booking a free strategy call to get a custom quote.",
+    q: "How much do your services cost?",
+    a: "We believe in transparent, value-driven pricing. Retainers start at ₹25,000/month, scaling based on the aggressiveness of your growth targets. Project-based work (websites, branding, video) is quoted custom after a discovery phase.",
   },
   {
     q: "How long does it take to see results from SEO?",
-    a: "SEO is a long-term investment. Most clients see meaningful improvements in rankings and traffic within 3–6 months, with significant compounding results from 6–12 months onwards. We provide monthly reports so you can track progress every step of the way.",
+    a: "While we implement quick wins immediately, true SEO compounding takes 3–6 months. We focus on sustainable, high-intent organic growth that builds lasting digital equity for your brand.",
   },
   {
-    q: "Do you work with small businesses or only large enterprises?",
-    a: "We work with ambitious businesses of all sizes — from funded startups and growing SMEs to established enterprises. Our solutions are always tailored to your budget, goals, and growth stage.",
+    q: "Do you guarantee results?",
+    a: "We guarantee world-class execution, complete transparency, and data-driven strategies. While no ethical agency can guarantee specific Google rankings, our track record of delivering high ROI across industries speaks for itself.",
   },
   {
-    q: "What is your onboarding process?",
-    a: "Our onboarding process starts with a free 30-minute strategy call to understand your goals. We then conduct a comprehensive audit of your current digital presence and deliver a customised growth roadmap within 5 business days. Once approved, we begin execution immediately.",
+    q: "What makes Adverix Media different from other agencies?",
+    a: "We are an integrated team of specialists. We don't just run ads; we build premium brands, optimize conversion rates, and produce cinematic video content. We focus entirely on measurable business outcomes, not vanity metrics.",
   },
   {
-    q: "Do you offer performance guarantees?",
-    a: "While no ethical agency can guarantee specific rankings or exact ROAS without understanding your full business context, we are deeply committed to delivering measurable results. We set clear KPIs in our contracts and work relentlessly to exceed them.",
-  },
-  {
-    q: "Which industries do you specialise in?",
-    a: "We have extensive experience across e-commerce, B2B SaaS, health & wellness, real estate, hospitality, education, and professional services. Our data-driven approach is adaptable to any industry.",
-  },
-  {
-    q: "Will I have a dedicated account manager?",
-    a: "Yes. Every client gets a dedicated account manager as their primary point of contact, plus access to our full team of specialists in SEO, design, paid media, video, and content.",
-  },
-  {
-    q: "How do you measure and report campaign performance?",
-    a: "We provide detailed monthly performance reports covering all agreed KPIs — traffic, rankings, leads, conversions, ROAS, and more. You'll also have access to a real-time live dashboard so you can check your campaign metrics at any time.",
-  },
-  {
-    q: "Can you manage our Google Ads and Meta Ads together?",
-    a: "Absolutely. We specialise in integrated cross-platform paid media campaigns and provide unified attribution reporting so you can see the true impact of each channel on your overall marketing funnel.",
-  },
-  {
-    q: "What is your minimum contract length?",
-    a: "For retainer services (SEO, social media, paid media), we recommend a minimum 3-month commitment to see meaningful results. After the initial period, contracts renew monthly with 30 days' notice to cancel.",
-  },
-  {
-    q: "Do you provide content and creative assets as part of your services?",
-    a: "Yes. Our in-house team handles all content creation including blog articles, social media graphics, ad creatives, email copy, and video scripts. You review and approve before anything goes live.",
-  },
-  {
-    q: "How do you approach local SEO for businesses in Kerala or India?",
-    a: "We have specific expertise in local SEO for the Indian market. We optimise your Google Business Profile, build local citations, create locally-relevant content, and implement schema markup to dominate local search results in your target geography.",
-  },
-  {
-    q: "What platforms do you use for social media management?",
-    a: "We primarily manage Instagram, Facebook, LinkedIn, and YouTube. Depending on your target audience and industry, we may also recommend Twitter/X, Pinterest, or emerging platforms like Threads.",
-  },
-  {
-    q: "Do you offer website maintenance after launch?",
-    a: "Yes. We offer monthly website maintenance retainers that include security updates, performance monitoring, content updates, and technical support. We also provide 30 days of complimentary post-launch support on all website projects.",
-  },
-  {
-    q: "Can you help with video production for social media specifically?",
-    a: "Yes. We produce short-form video content optimised for Instagram Reels, YouTube Shorts, and TikTok, in addition to long-form brand films and corporate videos. All videos are delivered in platform-optimised formats and aspect ratios.",
-  },
-  {
-    q: "Is the digital marketing proposal free?",
-    a: "Yes. Our initial 30-minute strategy call and custom digital marketing proposal are completely free with no obligation. We believe in demonstrating value upfront before asking for commitment.",
-  },
-  {
-    q: "How do you handle communication and project updates?",
-    a: "We use a combination of email updates, monthly strategy calls, and a shared project management dashboard. You'll always know exactly what's been done, what's coming next, and what results have been achieved.",
-  },
-  {
-    q: "Do you sign NDAs and confidentiality agreements?",
-    a: "Yes. We routinely sign NDAs and confidentiality agreements upon client request. Protecting your business information and competitive intelligence is something we take very seriously.",
-  },
-  {
-    q: "How do I get started with Adverix Media?",
-    a: "The easiest way to get started is to book a free 30-minute strategy call via our Contact page. Alternatively, you can email us at hello@adverixmedia.com or WhatsApp us directly. We typically respond within 2 hours during business hours.",
+    q: "How do you handle reporting and communication?",
+    a: "You receive a dedicated account manager, real-time analytics dashboards, bi-weekly strategy alignment calls, and comprehensive monthly performance reports detailing exactly where your investment is going and the return it's generating.",
   },
 ] as const;
+
+// ─── Blogs Data ──────────────────────────────────────────────────────────────
+export const BLOG_POSTS = [
+  {
+    slug: "complete-seo-guide-kerala-businesses",
+    title: "The Complete SEO Guide for Kerala Businesses in 2026",
+    excerpt: "Discover the exact strategies local Kerala businesses are using to dominate Google search and drive high-intent organic traffic.",
+    category: "SEO",
+    date: "July 12, 2026",
+    author: "Adverix Strategy Team",
+    readTime: "12 min read",
+    image: "/blog/seo-guide.jpg",
+  },
+  {
+    slug: "google-ads-vs-meta-ads",
+    title: "Google Ads vs Meta Ads: Where Should You Invest Your Budget?",
+    excerpt: "Search intent versus disruptive advertising. We break down the data to help you allocate your performance marketing budget effectively.",
+    category: "Performance Marketing",
+    date: "July 05, 2026",
+    author: "Adverix Performance Team",
+    readTime: "8 min read",
+    image: "/blog/google-meta-ads.jpg",
+  },
+  {
+    slug: "ai-search-optimization-aeo",
+    title: "AI Search Optimization (AEO): Future-Proofing Your Digital Presence",
+    excerpt: "ChatGPT, Gemini, and AI Overviews are changing search. Learn how Entity SEO ensures your brand remains the definitive answer.",
+    category: "AEO",
+    date: "June 28, 2026",
+    author: "Adverix Strategy Team",
+    readTime: "10 min read",
+    image: "/blog/ai-search.jpg",
+  },
+  {
+    slug: "local-seo-checklist",
+    title: "The Ultimate Local SEO Checklist for Multi-Location Brands",
+    excerpt: "A step-by-step framework to optimize your Google Business Profiles and capture local market share across multiple geographies.",
+    category: "Local SEO",
+    date: "June 20, 2026",
+    author: "Adverix SEO Team",
+    readTime: "9 min read",
+    image: "/blog/local-seo.jpg",
+  },
+  {
+    slug: "why-business-needs-video-marketing",
+    title: "Why Cinematic Video Marketing is Non-Negotiable in 2026",
+    excerpt: "Video is no longer optional. See how premium visual storytelling dramatically lowers acquisition costs and boosts conversion rates.",
+    category: "Video Production",
+    date: "June 15, 2026",
+    author: "Adverix Creative Team",
+    readTime: "7 min read",
+    image: "/blog/video-marketing.jpg",
+  },
+  {
+    slug: "website-design-mistakes",
+    title: "7 Costly Website Design Mistakes Killing Your Conversion Rate",
+    excerpt: "Beautiful design isn't enough. We analyze the common UX and performance flaws that are silently draining your marketing ROI.",
+    category: "Website Design",
+    date: "June 08, 2026",
+    author: "Adverix Design Team",
+    readTime: "11 min read",
+    image: "/blog/web-design.jpg",
+  },
+  {
+    slug: "content-marketing-strategy",
+    title: "Building a Content Marketing Strategy that Actually Generates Leads",
+    excerpt: "Move beyond fluff. Learn how to create authoritative, middle-of-funnel content that nurtures prospects and drives sales.",
+    category: "Content Marketing",
+    date: "May 30, 2026",
+    author: "Adverix Content Team",
+    readTime: "14 min read",
+    image: "/blog/content-strategy.jpg",
+  },
+  {
+    slug: "performance-marketing-guide",
+    title: "The Advanced Guide to Scaling Performance Marketing",
+    excerpt: "Strategies for scaling ad spend without losing ROAS. Deep dive into attribution modeling, bid strategies, and creative testing.",
+    category: "Performance Marketing",
+    date: "May 22, 2026",
+    author: "Adverix Performance Team",
+    readTime: "15 min read",
+    image: "/blog/performance-guide.jpg",
+  },
+  {
+    slug: "b2b-lead-generation-guide",
+    title: "B2B Lead Generation: Strategies for High-Ticket Sales",
+    excerpt: "How to combine LinkedIn targeting, cold email outreach, and high-value lead magnets to build a predictable B2B pipeline.",
+    category: "Lead Generation",
+    date: "May 14, 2026",
+    author: "Adverix Strategy Team",
+    readTime: "13 min read",
+    image: "/blog/lead-gen.jpg",
+  },
+  {
+    slug: "social-media-growth-guide",
+    title: "Organic Social Media Growth: Building Communities, Not Just Followings",
+    excerpt: "The playbook for authentic brand building on Instagram and LinkedIn through consistent, high-leverage content formats.",
+    category: "Social Media",
+    date: "May 05, 2026",
+    author: "Adverix Social Team",
+    readTime: "9 min read",
+    image: "/blog/social-growth.jpg",
+  },
+  {
+    slug: "brand-positioning-guide",
+    title: "Brand Positioning: How to Make Your Competitors Irrelevant",
+    excerpt: "A masterclass on defining your unique value proposition, target audience, and brand voice in a crowded digital landscape.",
+    category: "Branding",
+    date: "April 28, 2026",
+    author: "Adverix Creative Team",
+    readTime: "10 min read",
+    image: "/blog/brand-positioning.jpg",
+  },
+  {
+    slug: "future-of-ai-seo",
+    title: "The Future of SEO: Navigating the AI Search Revolution",
+    excerpt: "As search engines evolve into answer engines, we explore the fundamental shifts required in technical SEO and content architecture.",
+    category: "SEO",
+    date: "April 15, 2026",
+    author: "Adverix SEO Team",
+    readTime: "11 min read",
+    image: "/blog/future-seo.jpg",
+  },
+];
 
 // ─── Blog Categories ──────────────────────────────────────────────────────────
 export const BLOG_CATEGORIES = [
   "All",
   "SEO",
-  "Google Ads",
-  "Meta Ads",
-  "Social Media",
-  "Video Marketing",
+  "AEO",
+  "Performance Marketing",
+  "Video Production",
   "Branding",
+  "Website Design",
+  "Local SEO",
   "Content Marketing",
+  "Social Media",
+  "Lead Generation"
 ] as const;
 
 // ─── Portfolio Categories ─────────────────────────────────────────────────────

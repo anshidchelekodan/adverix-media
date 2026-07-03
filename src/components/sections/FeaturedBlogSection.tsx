@@ -5,36 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const BLOG_POSTS = [
-  {
-    slug: "seo-guide-small-business",
-    title: "Complete SEO Guide for Small Businesses",
-    excerpt: "Learn how to rank higher and get more customers.",
-    date: "May 25, 2026",
-    image: "/blog/seo-guide.jpg",
-  },
-  {
-    slug: "video-marketing-importance",
-    title: "Why Every Business Needs Video Marketing",
-    excerpt: "Video marketing can boost your brand and increase conversions.",
-    date: "May 23, 2026",
-    image: "/blog/video-marketing.jpg",
-  },
-  {
-    slug: "google-vs-facebook-ads",
-    title: "Google Ads vs Facebook Ads: Which is Better?",
-    excerpt: "A complete comparison to help you choose the right platform.",
-    date: "May 22, 2026",
-    image: "/blog/google-facebook-ads.jpg",
-  },
-  {
-    slug: "digital-marketing-trends",
-    title: "Top Digital Marketing Trends to Watch in 2026",
-    excerpt: "Stay ahead with the latest digital marketing trends.",
-    date: "May 20, 2026",
-    image: "/portfolio/technova.jpg", // Placeholder
-  },
-];
+import { BLOG_POSTS } from "@/lib/constants";
 
 export default function FeaturedBlogSection() {
   return (

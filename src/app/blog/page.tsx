@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Calendar, User, Clock } from "lucide-react";
-import { SITE, BLOG_CATEGORIES } from "@/lib/constants";
+import { SITE, BLOG_CATEGORIES, BLOG_POSTS } from "@/lib/constants";
 import Reveal from "@/components/ui/Reveal";
 import CTASection from "@/components/sections/CTASection";
 
@@ -12,39 +12,6 @@ export const metadata: Metadata = {
   alternates: { canonical: `${SITE.url}/blog` },
   openGraph: { url: `${SITE.url}/blog` },
 };
-
-const BLOG_POSTS = [
-  {
-    slug: "seo-guide-small-business",
-    title: "Complete SEO Guide for Small Businesses in 2026",
-    excerpt: "Learn how to outrank your competitors and dominate local search results with this comprehensive SEO checklist for small businesses.",
-    category: "SEO",
-    date: "June 25, 2026",
-    author: "Adverix Team",
-    readTime: "8 min read",
-    image: "/blog/seo-guide.jpg",
-  },
-  {
-    slug: "video-marketing-importance",
-    title: "Why Every Business Needs Video Marketing",
-    excerpt: "Video isn't just the future; it's the present. Discover how cinematic video production can drastically improve your conversion rates.",
-    category: "Video Marketing",
-    date: "June 18, 2026",
-    author: "Adverix Team",
-    readTime: "6 min read",
-    image: "/blog/video-marketing.jpg",
-  },
-  {
-    slug: "google-vs-facebook-ads",
-    title: "Google Ads vs Facebook Ads: Which is Better?",
-    excerpt: "Search intent vs disruptive advertising. We break down when to use Google Ads and when Meta Ads are the better choice for your budget.",
-    category: "Google Ads",
-    date: "June 10, 2026",
-    author: "Adverix Team",
-    readTime: "10 min read",
-    image: "/blog/google-facebook-ads.jpg",
-  },
-];
 
 export default function BlogPage() {
   return (

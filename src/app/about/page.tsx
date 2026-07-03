@@ -3,7 +3,7 @@ import Link from "next/link";
 import { SITE } from "@/lib/constants";
 import Reveal from "@/components/ui/Reveal";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
-import CTASection from "@/components/sections/CTASection";
+import CTASection from "@/components/sections/CTASection";git pu
 import { CheckCircle, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -25,12 +25,12 @@ const timeline = [
 ];
 
 const values = [
-  { title: "Excellence",   desc: "We set the bar high — for ourselves, our campaigns, and the results we deliver." },
+  { title: "Excellence", desc: "We set the bar high — for ourselves, our campaigns, and the results we deliver." },
   { title: "Transparency", desc: "No hidden fees, no vanity metrics. Clear reporting, honest communication, always." },
-  { title: "Innovation",   desc: "We stay ahead of every algorithm, platform change, and creative trend." },
-  { title: "Integrity",    desc: "We only take on clients we can genuinely help, and we always deliver on our promises." },
-  { title: "Partnership",  desc: "Your success is our success. We build relationships, not just campaigns." },
-  { title: "Impact",       desc: "Every strategy we create is designed to create a measurable, lasting impact." },
+  { title: "Innovation", desc: "We stay ahead of every algorithm, platform change, and creative trend." },
+  { title: "Integrity", desc: "We only take on clients we can genuinely help, and we always deliver on our promises." },
+  { title: "Partnership", desc: "Your success is our success. We build relationships, not just campaigns." },
+  { title: "Impact", desc: "Every strategy we create is designed to create a measurable, lasting impact." },
 ];
 
 export default function AboutPage() {
@@ -63,8 +63,8 @@ export default function AboutPage() {
           {[
             { num: "200+", label: "Projects Delivered" },
             { num: "100+", label: "Happy Clients" },
-            { num: "5+",   label: "Years Experience" },
-            { num: "95%",  label: "Client Retention" },
+            { num: "5+", label: "Years Experience" },
+            { num: "95%", label: "Client Retention" },
           ].map((s, i) => (
             <Reveal key={s.label} direction="up" delay={i * 80}>
               <div className="text-center">
