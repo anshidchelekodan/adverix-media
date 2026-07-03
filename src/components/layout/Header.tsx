@@ -21,9 +21,10 @@ export default function Header() {
   }, []);
 
   useEffect(() => {
-    const t = setTimeout(() => setIsMobileMenuOpen(false), 0);
-    return () => clearTimeout(t);
-  }, [pathname]);
+    if (!isMobileMenuOpen) return;
+    const timeout = window.setTimeout(() => setIsMobileMenuOpen(false), 0);
+    return () => window.clearTimeout(timeout);
+  }, [pathname, isMobileMenuOpen]);
 
   const navVariants = {
     hidden: { y: -100, opacity: 0 },

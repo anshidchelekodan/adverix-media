@@ -26,9 +26,9 @@ export default function AnimatedCounter({ end, duration = 2000 }: CounterProps) 
   useEffect(() => {
     if (!started) return;
     const numMatch = end.match(/[\d.]+/);
-    if (!numMatch) { 
-      const t = setTimeout(() => setDisplay(end), 0); 
-      return () => clearTimeout(t); 
+    if (!numMatch) {
+      const timeout = window.setTimeout(() => setDisplay(end), 0);
+      return () => window.clearTimeout(timeout);
     }
     const suffix = end.replace(/[\d.]+/, "");
     const target = parseFloat(numMatch[0]);

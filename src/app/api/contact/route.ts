@@ -89,8 +89,8 @@ export async function POST(req: NextRequest) {
       console.error("Email send failed:", err);
       // Still return 200 so user doesn't get confused
     }
-  } else {
-    // Log to console in development
+  } else if (process.env.NODE_ENV !== "production") {
+    // Log to console only in development when email sending is not configured.
     console.log("📧 Contact Form Submission:", { name, email, phone, company, service, budget, message });
   }
 

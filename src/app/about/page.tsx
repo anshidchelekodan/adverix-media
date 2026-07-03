@@ -4,7 +4,7 @@ import { SITE } from "@/lib/constants";
 import Reveal from "@/components/ui/Reveal";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import CTASection from "@/components/sections/CTASection";
-import { CheckCircle, ArrowRight } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Adverix Media — Our Story, Mission & Values",

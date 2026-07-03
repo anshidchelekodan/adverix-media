@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CheckCircle, ArrowRight, Phone } from "lucide-react";
-import { SITE, SERVICES, TESTIMONIALS, FAQ_GENERAL } from "@/lib/constants";
+import { SITE, SERVICES, TESTIMONIALS } from "@/lib/constants";
 import Reveal from "@/components/ui/Reveal";
 import CTASection from "@/components/sections/CTASection";
 
